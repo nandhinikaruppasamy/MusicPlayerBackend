@@ -24,8 +24,13 @@ router.post('/add', async (req, res) => {
 router.get('/read', async (req, res) => {
   try {
      const pid=req.query.pid;
-    const songs = await Song.find({playlist_id:pid});
-    res.json(songs);
+     if(!pid)
+
+{
+  return res.status(400).json({ msg: 'Playlist ID is required' });
+
+}   else{   const songs = await Song.find({playlist_id:pid});
+    res.json(songs);}
   } catch (err) {
     res.status(500).send('Server error');
   }
