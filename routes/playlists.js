@@ -5,6 +5,17 @@ const Song = require('../models/Song');
 
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+
+  try {
+    const playlists = await Playlist.find().populate('songs'); 
+    res.json(playlists);
+  } catch (err) {
+    console.error('Error fetching playlists:', err);
+    res.status(500).send('Server error');
+  }
+});
+
 router.post('/', async (req, res) => {
   const { name, description, songIds } = req.body;
 
