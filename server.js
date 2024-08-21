@@ -6,12 +6,12 @@ dotenv.config();
 
 const app = express();
 connectDB();
-
+const songRoutes=require('./routes/songs');
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/songs', require('./routes/songs'));
+app.use('/api/songs',songRoutes);
 app.use('/api/playlists', require('./routes/playlists'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5003;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
