@@ -13,5 +13,4 @@ Schema or Entity Relationship Diagram:
 
 Vercel Endpoints:
 
-<img width="671" alt="Screenshot 2024-08-21 at 4 15 13 PM" src="https://github.com/user-attachments/assets/3c45afc2-5a02-44fe-8f96-4a73dd2a690b">
-
+<img width="671" alt="Screenshot 2024-08-21 at 4 15 13 PM" src="https://github.com/user-attachments/assets/f263cfcc-e2ed-4535-bbfe-36496bb29919">
